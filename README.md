@@ -48,3 +48,8 @@ getServerSideProps | Server Side Rendering으로 요청이 있을 때 데이터�
 #7 무한스크롤 및 유저 페이지 생성 : https://drive.google.com/file/d/1mjAHv6PtEKvBNfxkW2dWnHRFdsI6bkU3/view?usp=sharing
 #8 애플리케이션 배포하기 : https://drive.google.com/file/d/1-ZxCXKXd9quQbwH1PRzMnkRwECm85Kvg/view?usp=sharing
 부록) Nextjs and Typescript : https://drive.google.com/file/d/1uvbiIXHVC3QIYBD1XOFRdiHiDQL57-G8/view?usp=sharing
+
+## 설치한 패키지
+```
+$ npm install gray-matter --save
+```
