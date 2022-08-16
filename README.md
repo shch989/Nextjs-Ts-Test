@@ -53,3 +53,6 @@ getServerSideProps | Server Side Rendering으로 요청이 있을 때 데이터�
 ```
 $ npm install gray-matter --save
 ```
+```
+$ npm install remark remark-html --save
+```
