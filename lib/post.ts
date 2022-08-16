@@ -2,7 +2,7 @@ import fs from "fs"; // 파일을 찾아서 읽는 역활
 import path from "path";
 import matter from 'gray-matter'; // 마크다운 파일로 블로그를 만들경우 거의 필수로 사용되어지는 라이브러리
 
-const postsDirectory = path.join(process.cwd(), 'posts'); 
+const postsDirectory = path.join(process.cwd(), 'posts'); // process.cwd()는 node명령을 호출한 작업디렉터리의 절대경로이다
 console.log('process.cwd()', process.cwd()); // 이 프로젝트의 경로가 출력됨
 console.log('postsDirectory', postsDirectory); // 이 프로젝트의 posts라는 이름의 폴더 경로가 출력됨
 
@@ -14,13 +14,13 @@ export function getSortedPostsData() {
     const id = fileName.replace(/\.md$/, '') // replace를 사용하여 이름에 .md가 있을 경우 .md를 없애줌
 
     const fullPath = path.join(postsDirectory, fileName) // fileName이 있는 경로가 출력됨
-    const fileContents = fs.readFileSync(fullPath, 'utf8') // utf8로 인코딩
+    const fileContents = fs.readFileSync(fullPath, 'utf8') // utf8로 md파일일 읽어줌
 
-    const matterResult = matter(fileContents) // gray-matter를 사용하여 변환
+    const matterResult = matter(fileContents) // gray-matter를 사용하여 데이터로 변환
 
     return {
       id,
-      ...(matterResult.data as { date: string; title: string })
+      ...matterResult.data as { date: string; title: string }
     }
   })
 
